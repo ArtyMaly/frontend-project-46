@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "name": "@hexlet/code",
+  "description": "[![Actions Status](https://github.com/ArtyMaly/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/ArtyMaly/frontend-project-46/actions)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type":"module",
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ArtyMaly",
+  "license": "ISC"
+}
