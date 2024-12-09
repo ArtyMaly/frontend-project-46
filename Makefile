@@ -15,3 +15,7 @@ test:
 
 test-coverage:
 	npx jest --coverage
+
+clear-test:
+	clear
+	npx jest
