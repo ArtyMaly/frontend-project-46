@@ -11,4 +11,5 @@ program
     const { format } = options;
     console.log(gendiff(file1, file2, format));
   });
+
 program.parse();

@@ -12,14 +12,19 @@ const plainStringify = (value, replacer = ' ', spacesCount = 1) => {
   };
   return typeof value !== 'object' ? `${value}` : iter(value, spacesCount);
 };
+
 const getIndent = (depth, spacesCount = 4) => ' '.repeat((depth * spacesCount) - 2);
+
 const getBracketIndent = (depth, spacesCount = 4) => ' '.repeat((depth * spacesCount) - spacesCount);
+
 export const stringify = (value) => {
   if (isPlainObject(value)) return plainStringify(value);
+
   const iter = (currentValue, depth = 1) => {
     if (!_.isObject(currentValue)) {
       return `${currentValue}`;
     }
+
     const indent = getIndent(depth);
     const bracketIndent = getBracketIndent(depth);
     const lines = Object
@@ -31,12 +36,15 @@ export const stringify = (value) => {
         }
         return `${indent}  ${key}: ${iter(val, depth + 1)}`;
       });
+
     return [
       '{',
       ...lines,
       `${bracketIndent}}`,
     ].join('\n');
   };
+
   return iter(value);
 };
+
 export default stringify;
